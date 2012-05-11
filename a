@@ -1,0 +1,36 @@
+union(){
+translate([6.4,0,0]) cylinder(h=5.75, r=.63, $fn=100);
+
+rotate([0,0,180]) translate([-6.4,0,5.75]) sphere(r=.63, center=true, $fn=100);
+
+rotate([0,7,180])translate([-7.05,0,5]) cylinder(h=10, r=.63, $fn=100);
+
+ rotate([0,7,180])translate ([-7.05,0,14.9]) cylinder(h=5.35, r=.1, $fn=100);
+}
+
+
+union(){
+cylinder(h=5.75, r=.63, $fn=100);
+
+translate([0,0,5.75]) sphere(r=.63, center=true, $fn=100);
+
+rotate([0,7,0])translate([-.7,0,5.75]) cylinder(h=10, r=.63, $fn=100);
+
+rotate([0,7,0])translate ([-.7,0,15.6]) cylinder(h=5.41, r=.1, $fn=100);
+}
+
+difference(){
+union(){
+translate([18.2,0,0]) cylinder(h=2, r=9,$fn=100);
+translate([18.2,0,1]) cylinder(h=4, r=7, $fn=100);
+}
+translate([21.4,0,-3]) cylinder(h=10, r=.63, $fn=100);
+translate([15,0,-3])cylinder(h=10, r=.63, $fn=100);
+}
+
+difference(){
+ translate([3.2,0,19.8]) rotate([90,0,0]) rotate_extrude([180,0,0],$fn=100)translate([1.73,0,0]) color()circle(.1, $fn=100);
+
+ translate([3.2,0,19.4]) cube([4,.3,3], center=true);
+
+}
